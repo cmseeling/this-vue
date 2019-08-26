@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Vue Component</h2>
-    <button>Reset</button>
+    <button @click="reset">Reset</button>
     <br/>
     <br/>
     <button @click="unbound">Unbound function</button>
@@ -37,6 +37,9 @@ export default {
       } else {
         this.properties = "'this' is undefined";
       }
+    },
+    reset() {
+      this.properties = "click a button to examine the 'this' object"
     }
   }
 }
